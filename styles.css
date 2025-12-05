@@ -824,33 +824,59 @@ html {
 }
 
 @media (max-width: 768px) {
+    /* Force mobile menu button to show */
     .mobile-menu-toggle {
         display: flex !important;
         z-index: 1001;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid var(--dark-brown) !important;
+        border-radius: 6px;
     }
     
+    /* Ensure hamburger lines are visible */
+    .mobile-menu-toggle span {
+        background-color: var(--dark-brown) !important;
+        width: 28px !important;
+        height: 3px !important;
+        display: block !important;
+    }
+    
+    /* Hide desktop nav links on mobile */
     .nav-menu {
         display: none !important;
         position: fixed;
         left: 0;
-        top: 80px;
+        top: 100px;
         flex-direction: column;
         background-color: var(--white);
         width: 100%;
         height: auto;
         text-align: center;
         transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         padding: 0;
         z-index: 999;
         gap: 0;
         list-style: none;
         margin: 0;
-        border-top: 1px solid rgba(44, 40, 38, 0.1);
+        border-top: 3px solid var(--primary-gold);
     }
     
+    /* Show menu when active */
     .nav-menu.active {
         display: flex !important;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
     .nav-menu li {
@@ -861,17 +887,16 @@ html {
     
     .nav-menu a {
         display: block !important;
-        padding: 18px 30px !important;
-        font-size: 1rem !important;
+        padding: 20px 30px !important;
+        font-size: 1.1rem !important;
         color: var(--dark-brown) !important;
         text-decoration: none !important;
-        border-bottom: 1px solid rgba(44, 40, 38, 0.05);
+        border-bottom: 1px solid rgba(44, 40, 38, 0.1);
         transition: all 0.3s ease;
-        background-color: transparent;
-        font-weight: 400 !important;
+        background-color: var(--white);
+        font-weight: 500 !important;
         letter-spacing: 1px !important;
         text-transform: uppercase !important;
-        gap: 0 !important;
     }
     
     .nav-menu li:last-child a {
@@ -879,8 +904,8 @@ html {
     }
     
     .nav-menu a:hover {
-        background-color: var(--warm-cream) !important;
-        color: var(--primary-gold) !important;
+        background-color: var(--primary-gold) !important;
+        color: var(--white) !important;
     }
     
     .hero {
