@@ -857,6 +857,40 @@ html {
         grid-template-columns: 1fr;
     }
     
+    /* Price List Mobile Styles */
+    .price-list-elegant {
+        padding: 40px 20px;
+        margin: 0 10px;
+    }
+    
+    .price-item {
+        margin-bottom: 20px;
+    }
+    
+    .price-service {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        flex-shrink: 0;
+        max-width: 60%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .price-dots {
+        margin: 0 8px 3px;
+        min-width: 20px;
+    }
+    
+    .price-amount {
+        font-size: 0.95rem;
+        flex-shrink: 0;
+        padding-left: 5px;
+    }
+    
+    .price-note {
+        padding: 0 20px;
+    }
+    
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -894,5 +928,30 @@ html {
     
     .service-card {
         padding: 30px 20px;
+    }
+    
+    /* Extra small mobile pricing adjustments */
+    .price-list-elegant {
+        padding: 30px 15px;
+        margin: 0 5px;
+    }
+    
+    .price-service {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        max-width: 55%;
+        line-height: 1.3;
+    }
+    
+    .price-amount {
+        font-size: 0.9rem;
+    }
+    
+    .price-note {
+        padding: 0 15px;
+    }
+    
+    .price-note p {
+        font-size: 0.8rem;
     }
 }
