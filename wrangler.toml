@@ -1,0 +1,12 @@
+name = "nomad-beauty-studio"
+compatibility_date = "2024-12-04"
+
+[env.production]
+routes = [
+  { pattern = "nomadbeauty.com/*", zone_name = "nomadbeauty.com" }
+]
+
+[[env.production.rules]]
+type = "Text"
+globs = ["**/*"]
+fallthrough = false
