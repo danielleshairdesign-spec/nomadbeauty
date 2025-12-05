@@ -857,34 +857,58 @@ html {
         grid-template-columns: 1fr;
     }
     
+    /* Mobile container overflow fix */
+    .container {
+        padding: 0 15px;
+        overflow-x: hidden;
+    }
+    
+    /* Services section mobile fix */
+    .services {
+        overflow-x: hidden;
+    }
+    
     /* Price List Mobile Styles */
     .price-list-elegant {
-        padding: 40px 20px;
-        margin: 0 10px;
+        padding: 40px 15px;
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        box-sizing: border-box;
     }
     
     .price-item {
         margin-bottom: 20px;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        overflow: hidden;
     }
     
     .price-service {
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-        flex-shrink: 0;
-        max-width: 60%;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        flex-shrink: 1;
+        min-width: 0;
+        max-width: 50%;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 5px;
     }
     
     .price-dots {
-        margin: 0 8px 3px;
+        flex: 1;
+        margin: 0 5px 3px;
         min-width: 20px;
+        border-bottom: 1px dotted rgba(44, 40, 38, 0.2);
     }
     
     .price-amount {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         flex-shrink: 0;
         padding-left: 5px;
+        white-space: nowrap;
+        font-weight: 500;
     }
     
     .price-note {
@@ -932,26 +956,56 @@ html {
     
     /* Extra small mobile pricing adjustments */
     .price-list-elegant {
-        padding: 30px 15px;
-        margin: 0 5px;
+        padding: 25px 10px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .price-item {
+        margin-bottom: 18px;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
     
     .price-service {
-        font-size: 0.8rem;
-        letter-spacing: 0.5px;
-        max-width: 55%;
-        line-height: 1.3;
+        font-size: 0.75rem;
+        letter-spacing: 0.3px;
+        max-width: 45%;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 3px;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+    
+    .price-dots {
+        flex: 1;
+        margin: 0 3px 2px;
+        min-width: 15px;
+        border-bottom: 1px dotted rgba(44, 40, 38, 0.2);
     }
     
     .price-amount {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+        padding-left: 3px;
+        white-space: nowrap;
+        font-weight: 500;
     }
     
     .price-note {
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
     .price-note p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.6;
     }
 }
